@@ -3,7 +3,7 @@
 CREATE DATABASE votingDB;
 USE votingDB;
 
-CREATE TABLE brackets
+CREATE TABLE categories
 (
 	id INT NOT NULL AUTO_INCREMENT,
 	category_name VARCHAR(100) NOT NULL,
@@ -11,25 +11,22 @@ CREATE TABLE brackets
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE choices
+CREATE TABLE rounds
 (
 	id INT NOT NULL AUTO_INCREMENT,
-	bracket_id INT(100),
-	choice_name INT(100),
-	choice_url VARCHAR(255) NOT NULL,
+	round_name VARCHAR(255) NOT NULL,
+	match_name VARCHAR(255) NOT NULL,
 	-- is_choices_selected BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE votes
+CREATE TABLE choices
 (
 	id INT NOT NULL AUTO_INCREMENT,
-	user_id INT,
-	bracket_id INT,
-	vote_name INT(255),
-	round_number INT,
-	-- vote_number INT,
-	-- is_votes_selected BOOLEAN DEFAULT false,
+	category_id INT(100),
+	choice_name INT(100),
+	choice_url VARCHAR(255) NOT NULL,
+	is_choices_selected BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 );
 

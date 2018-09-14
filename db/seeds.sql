@@ -1,17 +1,43 @@
-INSERT INTO votingDB.mainCategory (mainCategory_name, is_mainCategory_selected) VALUES ('Movies', true);
-INSERT INTO votingDB.mainCategory (mainCategory_name, is_mainCategory_selected) VALUES ('Animals', true);
-INSERT INTO votingDB.mainCategory (mainCategory_name, is_mainCategory_selected) VALUES ('Athletes', true);
+INSERT INTO votingDB.categories (category_name) VALUES ('Superhero Movies');
+INSERT INTO votingDB.categories (category_name) VALUES ('Horror Movies');
+INSERT INTO votingDB.categories (category_name) VALUES ('Comedy Movies');
+INSERT INTO votingDB.categories (category_name) VALUES ('Animal GIFs');
+INSERT INTO votingDB.categories (category_name) VALUES ('Sports GIFs');
 
-INSERT INTO votingDB.subCategory (category_name, is_category_selected) VALUES ('Superhero Movies', true);
+INSERT INTO votingDB.rounds (round_name, match_name) VALUES ('Round One', 'Match One');
+INSERT INTO votingDB.rounds (round_name, match_name) VALUES ('Round One', 'Match Two');
+INSERT INTO votingDB.rounds (round_name, match_name) VALUES ('Round One', 'Match Three');
+INSERT INTO votingDB.rounds (round_name, match_name) VALUES ('Round One', 'Match Four');
+INSERT INTO votingDB.rounds (round_name, match_name) VALUES ('Round Two', 'Match One');
+INSERT INTO votingDB.rounds (round_name, match_name) VALUES ('Round Two', 'Match Two');
+INSERT INTO votingDB.rounds (round_name, match_name) VALUES ('Round Two', 'Match Three');
+INSERT INTO votingDB.rounds (round_name, match_name) VALUES ('Round Two', 'Match Four');
 
-INSERT INTO votingDB.choice (choice_name, choice_url, is_choice_selected) VALUES ('The Dark Knight', '', true);
-INSERT INTO votingDB.choice (choice_name, choice_url, is_choice_selected) VALUES ('Captain America: The Winter Soldier', '', false);
-INSERT INTO votingDB.choice (choice_name, choice_url, is_choice_selected) VALUES ('Spiderman 2', '', true);
-INSERT INTO votingDB.choice (choice_name, choice_url, is_choice_selected) VALUES ('Superman (1978)', '', false);
-INSERT INTO votingDB.choice (choice_name, choice_url, is_choice_selected) VALUES ('The Avengers', '', true);
-INSERT INTO votingDB.choice (choice_name, choice_url, is_choice_selected) VALUES ('Batman Begins', '', false);
-INSERT INTO votingDB.choice (choice_name, choice_url, is_choice_selected) VALUES ('Guardians of the Galaxy', '', true);
-INSERT INTO votingDB.choice (choice_name, choice_url, is_choice_selected) VALUES ('Logan', '', false);
+
+
+INSERT INTO votingDB.choices (choice_name) VALUES ('');
+
+
+
+CREATE TABLE choices
+(
+	id INT NOT NULL AUTO_INCREMENT,
+	category_id INT(100),
+	choice_name INT(100),
+	choice_url VARCHAR(255) NOT NULL,
+	-- is_choices_selected BOOLEAN DEFAULT false,
+	PRIMARY KEY (id)
+);
+
+
+INSERT INTO votingDB.choices (choice_name, , is_choice_selected) VALUES ('The Dark Knight', true);
+INSERT INTO votingDB.choices (choice_name, , is_choice_selected) VALUES ('Captain America: The Winter Soldier', false);
+INSERT INTO votingDB.choices (choice_name, , is_choice_selected) VALUES ('Spiderman 2', false);
+INSERT INTO votingDB.choices (choice_name, , is_choice_selected) VALUES ('Superman (1978)', false);
+INSERT INTO votingDB.choices (choice_name, , is_choice_selected) VALUES ('The Avengers', false);
+INSERT INTO votingDB.choices (choice_name, , is_choice_selected) VALUES ('Batman Begins', false);
+INSERT INTO votingDB.choices (choice_name, , is_choice_selected) VALUES ('Guardians of the Galaxy', false);
+INSERT INTO votingDB.choices (choice_name, , is_choice_selected) VALUES ('Logan', false);
 
 INSERT INTO votingDB.subCategory (category_name, is_category_selected) VALUES ('Horror Movies', true);
 
