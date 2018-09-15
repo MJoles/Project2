@@ -1,9 +1,9 @@
 module.exports = function (sequelize, DataTypes) {
   var RoundOne = sequelize.define("RoundOne", {
-    choice1: DataTypes.INT,
-    choice2: DataTypes.INT,
-    choice3: DataTypes.INT,
-    choice4: DataTypes.INT
+    choiceOne: DataTypes.INTEGER,
+    choiceTwo: DataTypes.INTEGER,
+    choiceThree: DataTypes.INTEGER,
+    choiceFour: DataTypes.INTEGER
   });
   return RoundOne;
 };
