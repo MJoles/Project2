@@ -1,8 +1,3 @@
-
-
-
-
-
 -- -- Added some dummy data for movies (superhero movies and horror movies, and comedies)
 -- -- Need to add more dummy data (regarding GIFs)
 --
@@ -28,16 +23,16 @@
 -- INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('Scream', 'E', 2, false);
 -- INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('The Cabin in the Woods', 'F', 2, true);
 -- INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('A Nightmare on Elm Street (1984)', 'G', 2, false);
--- INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('Scream 3', 'H', 2, true);
--- -- Comedies
--- INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('Monty Python and the Holy Grail', 'A', 3, false);
--- INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('Airplane', 'B', 3, true);
--- INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('Groundhog Day', 'C', 3, false);
--- INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('Ghostbusters', 'D', 3, true);
--- INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('The Hangover', 'E', 3, false);
--- INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('Dumb and Dumber', 'F', 3, true);
--- INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('Vacation', 'G', 3, false);
--- INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('Office Space', 'H', 3, true);
+--  INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('Scream 3', 'H', 2, true);
+--  -- Comedies
+--  INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('Monty Python and the Holy Grail', 'A', 3, false);
+--  INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('Airplane', 'B', 3, true);
+--  INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('Groundhog Day', 'C', 3, false);
+--  INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('Ghostbusters', 'D', 3, true);
+--  INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('The Hangover', 'E', 3, false);
+--  INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('Dumb and Dumber', 'F', 3, true);
+--  INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('Vacation', 'G', 3, false);
+--  INSERT INTO votingDB.choices (choice_name, group_code, category_group, is_choice_selected) VALUES ('Office Space', 'H', 3, true);
 --
--- SELECT * FROM votingDB.categories;
--- SELECT * FROM votingDB.choices;
+--  SELECT * FROM votingDB.categories;
+--  SELECT * FROM votingDB.choices;
