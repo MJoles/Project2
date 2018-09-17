@@ -4,6 +4,7 @@ var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 
 var db = require("./models");
+var seeds = require("./seeds");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -35,13 +36,17 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
+// Syncing our sequelize models and then starting our Express app
+// =============================================================
+db.sequelize.sync({ force: true }).then(function() {
+  db.Movie.bulkCreate(seeds).then(function() {
+    app.listen(PORT, function() {
+      console.log(
+        "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+        PORT,
+        PORT
+      );
+    });
   });
 });
 
