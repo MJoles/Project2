@@ -9,8 +9,13 @@ var db = require("./models");
 var seeds = require("./db/seeds");
 
 var app = express();
+<<<<<<< HEAD
 //var PORT = process.env.PORT || 4000;  4000 is just for Tad local testing
 var PORT = process.env.PORT || 4000;
+=======
+var PORT = process.env.PORT || 3000;
+app.enable('trust proxy');
+>>>>>>> f75d83d67cdc149f58c219d6aa03f5b32658740f
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));

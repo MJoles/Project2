@@ -6,7 +6,7 @@ module.exports = function(app) {
     db.Movie.findAll({}).then(function(moviesdb) {
       res.render("index", {
         msg: "Welcome!",
-        movies: moviesdb
+        movies: votingdb
       });
     });
   });
@@ -56,9 +56,11 @@ module.exports = function(app) {
 
   //Load Round 0
   app.get("/round", function(req, res) {
-    db.RoundZero.findAll({}).then(function(round) {
+    console.log(req.headers['x-forwarded-for'], req.connection.remoteAddress, '');
+    console.log(ip);
+    db.userTable.findAll({}).then(function(round) {
       res.render("round", {
-        movies: firstRound
+        movies: round
       });
     });
   });
