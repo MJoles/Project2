@@ -14,7 +14,6 @@ module.exports = function (app) {
 
   //tad test Load Round 0
   app.get(“/test”, function(req, res) {
-  // db.RoundZero.findAll({}).then(function(round) {
     res.render(“round1", {
       movies: [
         {
@@ -50,6 +49,7 @@ module.exports = function (app) {
     movieTitle: "Logan"
   }
     ]
+  });
     });
 
 
