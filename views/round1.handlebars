@@ -6,14 +6,14 @@
   <p class="lead">--------------------</p>
   <div class="container">
 
-         {{#if Movie.movietTitle[0]}} {{> movies/movie-block }}{{/if}} {{#if Movie.movietTitle[1]}} {{> movies/movie-block }}{{/if}}
+    {{> movies/movie-block movies[0] }} {{> movies/movie-block movies[1] }}
   </div>
 
   <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-5">Match 2</h1>
     <p class="lead">--------------------</p>
     <div class="container">
-      {{#if Movie.movietTitle[2]}} {{> movies/movie-block }}{{/if}} {{#if Movie.movietTitle[3]}} {{> movies/movie-block }}{{/if}}
+      {{> movies/movie-block movies[2] }} {{> movies/movie-block movies[3] }}
     </div>
 
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
@@ -21,7 +21,7 @@
       <p class="lead">--------------------</p>
       <div class="container">
 
-      {{#if Movie.movietTitle[4]}} {{> movies/movie-block }}{{/if}} {{#if Movie.movietTitle[5]}} {{> movies/movie-block }}{{/if}}
+        {{> movies/movie-block movies[4] }} {{> movies/movie-block movies[5] }}
       </div>
 
       <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
@@ -29,5 +29,5 @@
         <p class="lead">--------------------</p>
         <div class="container">
 
-      {{#if Movie.movietTitle[6]}} {{> movies/movie-block }}{{/if}} {{#if Movie.movietTitle[7]}} {{> movies/movie-block }}{{/if}}
+          {{> movies/movie-block movies[6] }} {{> movies/movie-block movies[7] }}
         </div>
