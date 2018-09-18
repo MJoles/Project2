@@ -10,6 +10,7 @@ var seeds = require("./db/seeds");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
+app.enable('trust proxy');
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -88,14 +89,13 @@ db.sequelize.sync({ force: true }).then(function() {
     db.RoundTwo.bulkCreate(seeds.roundTwoSeeds),
     db.RoundThree.bulkCreate(seeds.roundThreeSeeds)
   ]).then(function() {
-    return db.sequelize.close();
-  });
-  app.listen(PORT, function() {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
+    app.listen(PORT, function() {
+      console.log(
+        "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+        PORT,
+        PORT
+      );
+    });
   });
 });
 
