@@ -9,7 +9,8 @@ var db = require("./models");
 var seeds = require("./db/seeds");
 
 var app = express();
-var PORT = process.env.PORT || 3000;
+//var PORT = process.env.PORT || 4000;  4000 is just for Tad local testing
+var PORT = process.env.PORT || 4000;
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -88,14 +89,13 @@ db.sequelize.sync({ force: true }).then(function() {
     db.RoundTwo.bulkCreate(seeds.roundTwoSeeds),
     db.RoundThree.bulkCreate(seeds.roundThreeSeeds)
   ]).then(function() {
-    return db.sequelize.close();
-  });
-  app.listen(PORT, function() {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
+    app.listen(PORT, function() {
+      console.log(
+        "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+        PORT,
+        PORT
+      );
+    });
   });
 });
 

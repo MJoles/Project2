@@ -11,6 +11,49 @@ module.exports = function(app) {
     });
   });
 
+  //tad test Load Round 0
+  app.get("/test", function(req, res) {
+    // db.RoundZero.findAll({}).then(function(round) {
+      res.render("round1", {
+        movies: [
+          {
+              id: '1',
+              movieTitle: 'movie1'
+          },
+          {
+              id: '2',
+              movieTitle: 'movie2'
+          },
+          {
+            id: '3',
+            movieTitle: 'movie3'
+        },
+        {
+            id: '4',
+            movieTitle: 'movie4'
+        },
+        {
+          id: '5',
+          movieTitle: 'movie5'
+      },
+      {
+          id: '6',
+          movieTitle: 'movie6'
+      },
+      {
+        id: '7',
+        movieTitle: 'movie7'
+    },
+    {
+        id: '8',
+        movieTitle: 'movie8'
+    }
+      ]
+      });
+    // });
+  });
+
+
   //Load Round 0
   app.get("/round", function(req, res) {
     db.RoundZero.findAll({}).then(function(round) {
