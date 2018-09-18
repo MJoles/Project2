@@ -16,7 +16,7 @@ module.exports = function(app) {
     var ip = (req.headers['x-forwarded-for'] || req.connection.remoteAddress || '').split(',')[0].trim();
     console.log(ip);
     db.userTable.findOne({}).then(function(roundZero) {
-      res.render("index", {
+      res.render("round1", {
         movies: roundZero
       });
     });
