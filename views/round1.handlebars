@@ -6,29 +6,28 @@
   <p class="lead">--------------------</p>
   <div class="container">
 
-    {{> movies/movie-block }} {{> movies/movie-block }}
+         {{#if Movie.movietTitle[0]}} {{> movies/movie-block }}{{/if}} {{#if Movie.movietTitle[1]}} {{> movies/movie-block }}{{/if}}
   </div>
 
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-5">Match 2</h1>
-  <p class="lead">--------------------</p>
-  <div class="container">
+  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-5">Match 2</h1>
+    <p class="lead">--------------------</p>
+    <div class="container">
+      {{#if Movie.movietTitle[2]}} {{> movies/movie-block }}{{/if}} {{#if Movie.movietTitle[3]}} {{> movies/movie-block }}{{/if}}
+    </div>
 
-    {{> movies/movie-block }} {{> movies/movie-block }}
-  </div>
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-5">Match 3</h1>
+      <p class="lead">--------------------</p>
+      <div class="container">
 
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-5">Match 3</h1>
-  <p class="lead">--------------------</p>
-  <div class="container">
+      {{#if Movie.movietTitle[4]}} {{> movies/movie-block }}{{/if}} {{#if Movie.movietTitle[5]}} {{> movies/movie-block }}{{/if}}
+      </div>
 
-    {{> movies/movie-block }} {{> movies/movie-block }}
-  </div>
-  
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-5">Match 4</h1>
-  <p class="lead">--------------------</p>
-  <div class="container">
+      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-5">Match 4</h1>
+        <p class="lead">--------------------</p>
+        <div class="container">
 
-    {{> movies/movie-block }} {{> movies/movie-block }}
-  </div>
+      {{#if Movie.movietTitle[6]}} {{> movies/movie-block }}{{/if}} {{#if Movie.movietTitle[7]}} {{> movies/movie-block }}{{/if}}
+        </div>
