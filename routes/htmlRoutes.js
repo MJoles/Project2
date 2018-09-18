@@ -2,18 +2,20 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Load index page
-  app.get("/", function(req, res) {
-    db.Movie.findAll({}).then(function(moviesdb) {
-      res.render("index", {
-        msg: "Welcome!",
-        movies: moviesdb
-      });
-    });
-  });
+  // app.get("/", function(req, res) {
+  //   db.Movie.findAll({}).then(function(moviesdb) {
+  //     res.render("index", {
+  //       msg: "Welcome!",
+  //       movies: moviesdb
+  //     });
+  //   });
+  // });
 
   //Load Round 0
   app.get("/round", function(req, res) {
-    db.Movie.findAll({}).then(function(roundZero) {
+    var ip = (req.headers['x-forwarded-for'] || req.connection.remoteAddress || '').split(',')[0].trim();
+    console.log(ip);
+    db.userTable.findOne({}).then(function(roundZero) {
       res.render("index", {
         movies: roundZero
       });
