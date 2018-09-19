@@ -2,14 +2,14 @@ var db = require("../models");
 
 module.exports = function (app) {
   // Load index page
-  app.get("/", function (req, res) {
-    db.Movie.findAll({}).then(function (moviesdb) {
-      res.render("index", {
-        msg: "Welcome!",
-        movies: votingdb
-      });
-    });
-  });
+  // app.get("/", function (req, res) {
+  //   db.Movie.findAll({}).then(function (moviesdb) {
+  //     res.render("index", {
+  //       msg: "Welcome!",
+  //       movies: votingdb
+  //     });
+  //   });
+  // });
 
 
   //tad test Load Round 0
