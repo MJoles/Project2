@@ -1,4 +1,4 @@
- {{each movie}}
+
 
 <h1> Round 2 (Semifinals)</h1>
 
@@ -7,14 +7,14 @@
   <p class="lead">--------------------</p>
   <div class="container">
 
-    {{> movies/movie-block movies[0] }} {{> movies/movie-block movies[1] }}
+    {{> movies/movie-block movie=movies[0] }} {{> movies/movie-block movie=movies[1] }}
   </div>
 
   <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-5">Match 2</h1>
     <p class="lead">--------------------</p>
     <div class="container">
-      {{> movies/movie-block movies[2] }} {{> movies/movie-block movies[3] }}
+      {{> movies/movie-block movie=movies[2] }} {{> movies/movie-block movie=movies[3] }}
     </div>
 
     

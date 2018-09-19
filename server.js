@@ -9,7 +9,8 @@ var db = require("./models");
 var seeds = require("./db/seeds");
 
 var app = express();
-var PORT = process.env.PORT || 3000;
+// var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 4000;
 app.enable('trust proxy');
 
 // Middleware
