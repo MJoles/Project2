@@ -1,6 +1,6 @@
 require("dotenv").config();
 var express = require("express");
-var passport = require('passport');
+// var passport = require('passport');
 var session = require('express-session');
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
@@ -19,9 +19,9 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 // For Passport
-app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
+// app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
+// app.use(passport.initialize());
+// app.use(passport.session()); // persistent login sessions
 
 // Handlebars
 app.engine(
@@ -36,10 +36,10 @@ app.set("view engine", "handlebars");
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 // var authRoute = require("./routes/auth.js")(app);
-var authRoute = require('./routes/auth.js')(app, passport);
+// var authRoute = require('./routes/auth.js')(app, passport);
 
 //load passport strategies
-require('./config/passport/passport.js')(passport, db.user);
+// require('./config/passport/passport.js')(passport, db.user);
 
 var syncOptions = { force: false };
 
@@ -99,6 +99,20 @@ db.sequelize.sync({ force: true }).then(function() {
     });
   });
 });
+
+
+// // Making the output brighter, and adding different color to every word. Cause...priorities
+// console.log("\x1b[1m","\x1b[34m","\n-------------------------------------------------\n" + "\x1b[30m","==> 🌎" +"\x1b[31m","Listening" + "\x1b[32m","on" + "\x1b[33m","port" + "\x1b[34m","%s." + "\x1b[35m","Visit:" + "\x1b[36m","http://localhost:%s/",PORT+ "\x1b[34m","\n-------------------------------------------------\n");
+//
+// // Resetting console formatting to default
+// console.log("\x1b[0m");
+//
+// console.log("\x1b[1m","\x1b[34m","\n-------------------------------------------------\n" + "\x1b[30m","==> 🌎" +"\x1b[31m","Visit" + "\x1b[32m","http://localhost:%s/" + "\x1b[33m","in" + "\x1b[34m","your" + "\x1b[35m","browser.", PORT + "\x1b[34m","\n-------------------------------------------------\n");
+//
+// // Resetting console formatting to default
+// console.log("\x1b[0m");
+
+
 
 
 // db.sequelize.sync({ force: true })

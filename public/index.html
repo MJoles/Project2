@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Victory Votes!</title>
+    <title>Brack-Attack!</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +31,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Victory Votes</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Brack-Attack</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,10 +41,10 @@
               <a class="nav-link js-scroll-trigger" href="#page-top">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">General Leaderboard</a>
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Leaderboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">Rules</a>
+              <a class="nav-link js-scroll-trigger" href="#rules">Rules</a>
             </li>
           </ul>
         </div>
@@ -56,20 +56,20 @@
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <h1 class="text-uppercase">
-              <strong>Victory Votes</strong>
+              <strong>Brack-Attack</strong>
             </h1>
             <hr>
           </div>
           <div class="col-lg-8 mx-auto">
             <p class="text-grey mb-5">Vote on your favorite items and see how your choice stacks up!</p>
             <!-- This will take the user to the "Home" page -->
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Get Started!</a>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#rules">Get Started!</a>
           </div>
         </div>
       </div>
     </header>
 
-    <section class="bg-primary" id="about">
+    <!-- <section class="bg-primary" id="rules">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
@@ -79,7 +79,26 @@
               1. Select the category you want to battle it out with <br>
               2. Two contestants will appear. You decide the victor by clicking on it.<br>
               3. The contestants will continue to populate and you decide which one <br> gets sent to the next round.<br>
-              4. At the end, you will see the winner, aka the contestant who caused the most BRACKET RACKET!</p>
+              4. At the end, you will see the how your pick matches up against the competion</p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="bg-primary" id="rules">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white text-center" onmouseover="mouseOverFunction()" onmouseout="mouseOutFunction()">Rules Of The Game!</h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4">
+              <div id="ruleDetail">
+                1. Select the category you want to battle it out with <br>
+                2. Two contestants will appear. You decide the victory by clicking on it.<br>
+                3. The contestants will continue to populate and you decide which one <br> gets sent to the next round.<br>
+                4. At the end, you will see the how your pick matches up against the competion</p>
+              </div>
             <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
           </div>
         </div>
@@ -232,6 +251,29 @@
         <a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>
       </div>
     </section> -->
+
+
+
+
+<!-- These are used for toggling the rules -->
+    <script>
+    function mouseOverFunction() {
+        var x = document.getElementById("ruleDetail");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    function mouseOutFunction() {
+        var x = document.getElementById("ruleDetail");
+        if (x.style.display === "none") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    </script>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
