@@ -13,7 +13,7 @@ module.exports = function (app) {
 
 
   //tad test Load Round 0
-  app.get("/test", function (req, res) {
+  app.get("/rd1", function (req, res) {
     res.render("round1", {
       movies: [
         {
@@ -52,8 +52,12 @@ module.exports = function (app) {
     });
   });
 
+  //tad test --round 2 starts by loading Round 1 choices
+  app.get("/rd2", function (req, res) {
+    res.render("round2", {
 
-
+    });
+  });
 
   //Load Round 0
   app.get("/round", function (req, res) {
