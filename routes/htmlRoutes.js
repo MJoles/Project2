@@ -13,9 +13,68 @@ module.exports = function (app) {
 
   //tad test Load Round 0
   app.get("/rd1", function (req, res) {
+<<<<<<< HEAD
     db.Movie.findAll({}).then(function (dbMovies_r1) {
       res.render("round1", {
         movies: dbMovies_r1
+=======
+    db.Movie.findAll({}).then(function (dbMovies) {
+      res.render("round1", {
+        movies: dbMovies
+      })
+    })
+    // res.render("round1", {
+    //   movies: [
+    //     {
+    //       id: 1,
+    //       movieTitle: 'The Dark Knight'
+    //     },
+    //     {
+    //       id: 2,
+    //       movieTitle: 'Captain America: The Winter Soldier'
+    //     },
+    //     {
+    //       id: 3,
+    //       movieTitle: 'Spiderman 2'
+    //     },
+    //     {
+    //       id: 4,
+    //       movieTitle: 'Superman (1978)'
+    //     },
+    //     {
+    //       id: 5,
+    //       movieTitle: 'The Avengers'
+    //     },
+    //     {
+    //       id: 6,
+    //       movieTitle: 'Batman Begins'
+    //     },
+    //     {
+    //       id: 7,
+    //       movieTitle: 'Guardians of the Galaxy'
+    //     },
+    //     {
+    //       id: 8,
+    //       movieTitle: 'Logan'
+    //     },
+    //   ]
+    // });
+  });
+
+  //tad test --round 2 starts by loading Round 1 choices
+  app.get("/rd2", function (req, res) {
+    res.render("round2", {
+
+    });
+  });
+
+  //Load Round 0
+  app.get("/round", function (req, res) {
+    console.log(req.headers['x-forwarded-for'], req.connection.remoteAddress, '');
+    console.log(ip);
+    db.userTable.findAll({}).then(function (round) {
+      res.render("round", {
+        movies: round
       });
     });
   });
