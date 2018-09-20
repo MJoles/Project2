@@ -9,10 +9,26 @@ var userPicks = {
 
 $('.votingbutton').on('click', function () {
     console.log(this);
+    var match = $(this).data("match");
+    console.log(match);
+    var id = $(this).data("id");
+
     //figure out which match you're in
     //then get id that they clicked
     //update the userPicks vars 
-    //
+    if (match === "1") {
+        userPicks.choiceOne=id;
+    }
+    else if (match === "2") {
+        userPicks.choiceTwo=id;
+    }
+    else if (match === "3") {
+        userPicks.choiceThree=id;
+    }
+    else if (match === "4") {
+        userPicks.choiceFour=id;
+    }
+
 
     //   $.ajax({
     // headers: {
@@ -25,7 +41,10 @@ $('.votingbutton').on('click', function () {
 });
 
 //on click handle for the submit button
-$()
+$(".submitButton").on('click', function () {
+
 // ensure strings arent empty
+
 //make ajax post request
 //.then redirect them to next page 
+});
