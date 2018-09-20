@@ -39,7 +39,7 @@ $(".submitButton").on('click', function () {
     // ensure strings arent empty
     if (userPicks.choiceOne === "" || userPicks.choiceTwo === "" || userPicks.choiceThree === "" || userPicks.choiceFour === "") {
         return false
-        //need to add error message
+        //need to add error message later
     }
     else {
         //make ajax post request
@@ -56,4 +56,4 @@ $(".submitButton").on('click', function () {
     //     type: "POST",
     //     url: "/rd2",
     //     data: JSON.stringify(example)
-    //   });
+//   });
