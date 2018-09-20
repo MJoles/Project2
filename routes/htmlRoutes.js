@@ -14,42 +14,47 @@ module.exports = function (app) {
 
   //tad test Load Round 0
   app.get("/rd1", function (req, res) {
-    res.render("round1", {
-      movies: [
-        {
-          id: 1,
-          movieTitle: 'The Dark Knight'
-        },
-        {
-          id: 2,
-          movieTitle: 'Captain America: The Winter Soldier'
-        },
-        {
-          id: 3,
-          movieTitle: 'Spiderman 2'
-        },
-        {
-          id: 4,
-          movieTitle: 'Superman (1978)'
-        },
-        {
-          id: 5,
-          movieTitle: 'The Avengers'
-        },
-        {
-          id: 6,
-          movieTitle: 'Batman Begins'
-        },
-        {
-          id: 7,
-          movieTitle: 'Guardians of the Galaxy'
-        },
-        {
-          id: 8,
-          movieTitle: 'Logan'
-        },
-      ]
-    });
+    db.Movie.findAll({}).then(function (dbMovies) {
+      res.render("round1", {
+        movies: dbMovies
+      })
+    })
+    // res.render("round1", {
+    //   movies: [
+    //     {
+    //       id: 1,
+    //       movieTitle: 'The Dark Knight'
+    //     },
+    //     {
+    //       id: 2,
+    //       movieTitle: 'Captain America: The Winter Soldier'
+    //     },
+    //     {
+    //       id: 3,
+    //       movieTitle: 'Spiderman 2'
+    //     },
+    //     {
+    //       id: 4,
+    //       movieTitle: 'Superman (1978)'
+    //     },
+    //     {
+    //       id: 5,
+    //       movieTitle: 'The Avengers'
+    //     },
+    //     {
+    //       id: 6,
+    //       movieTitle: 'Batman Begins'
+    //     },
+    //     {
+    //       id: 7,
+    //       movieTitle: 'Guardians of the Galaxy'
+    //     },
+    //     {
+    //       id: 8,
+    //       movieTitle: 'Logan'
+    //     },
+    //   ]
+    // });
   });
 
   //tad test --round 2 starts by loading Round 1 choices

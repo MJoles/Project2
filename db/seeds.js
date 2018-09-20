@@ -1,5 +1,5 @@
 var userSeeds = [
-  { ip_address: "165.124.145.36"}
+  { name: "John Doe"}
 ];
 
 var seeds = [
