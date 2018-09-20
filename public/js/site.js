@@ -1,4 +1,4 @@
-var userPicks = {
+var roundOneUserPicks = {
     choiceOne: "",
     choiceTwo: "",
     choiceThree: "",
@@ -17,16 +17,16 @@ $('.votingbutton').on('click', function () {
     //then get id that they clicked
     //update the userPicks vars 
     if (match === "1") {
-        userPicks.choiceOne = id;
+        roundOneUserPicks.choiceOne = id;
     }
     else if (match === "2") {
-        userPicks.choiceTwo = id;
+        roundOneUserPicks.choiceTwo = id;
     }
     else if (match === "3") {
-        userPicks.choiceThree = id;
+        roundOneUserPicks.choiceThree = id;
     }
     else if (match === "4") {
-        userPicks.choiceFour = id;
+        roundOneUserPicks.choiceFour = id;
     }
 
 });
