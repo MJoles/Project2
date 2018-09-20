@@ -1,12 +1,12 @@
 <h1> Round 1 (Four matches)</h1>
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-5">Match 1</h1>
+  <h1 class="display-5">Match 1    </h1>
   <p class="lead">--------------------</p>
   <div class="container">
     <div class="row">
 
-      {{> movies/movie-block movies.[0]}} {{> movies/movie-block movies.[1]}}
+      {{> movies/movie-block movies.[0] match=1}} vs {{> movies/movie-block movies.[1] match=1}}
     </div>
   </div>
 </div>
@@ -16,7 +16,7 @@
   <p class="lead">--------------------</p>
   <div class="container">
     <div class="row">
-      {{> movies/movie-block movies.[2] }} {{> movies/movie-block movies.[3] }}
+      {{> movies/movie-block movies.[2] match=2}} vs {{> movies/movie-block movies.[3] match=2}}
     </div>
   </div>
 </div>
@@ -26,7 +26,7 @@
   <p class="lead">--------------------</p>
   <div class="container">
     <div class="row">
-      {{> movies/movie-block movies.[4] }} {{> movies/movie-block movies.[5] }}
+      {{> movies/movie-block movies.[4] }} vs {{> movies/movie-block movies.[5] }}
     </div>
   </div>
 </div>
@@ -36,7 +36,10 @@
   <p class="lead">--------------------</p>
   <div class="container">
     <div class="row">
-      {{> movies/movie-block movies.[6] }} {{> movies/movie-block movies.[7] }}
+      {{> movies/movie-block movies.[6] }} vs {{> movies/movie-block movies.[7] }}
     </div>
   </div>
-</div>
+  <br>
+  <br> 
+
+    <button class="btn bg-primary btn-primary submitButton">  Submit  </button>

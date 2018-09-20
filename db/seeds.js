@@ -1,5 +1,14 @@
 var userSeeds = [
-  { name: "John Doe"}
+  { name: "Vincent Balog"},
+  { name: "Johnsie Keene"},
+  { name: "Pauletta Hardegree"},
+  { name: "Quinton Fregoso"},
+  { name: "Virgil Luedke"},
+  { name: "Nilsa Steinhauer"},
+  { name: "Dwana January"},
+  { name: "Rolland Umland"},
+  { name: "Princess Otey"},
+  { name: "Vincenzo Leeman"},
 ];
 
 var seeds = [
@@ -32,19 +41,54 @@ var seeds = [
 ];
 
 var roundZeroSeeds = [
-  { user_id: 1, choiceOne: 1, choiceTwo: 2, choiceThree: 3, choiceFour: 4, choiceFive: 5, choiceSix: 6, choiceSeven: 7, choiceEight: 8}
+  { user_id: 1, choiceOne: 1, choiceTwo: 2, choiceThree: 3, choiceFour: 4, choiceFive: 5, choiceSix: 6, choiceSeven: 7, choiceEight: 8},
+  { user_id: 2, choiceOne: 1, choiceTwo: 2, choiceThree: 3, choiceFour: 4, choiceFive: 5, choiceSix: 6, choiceSeven: 7, choiceEight: 8},
+  { user_id: 4, choiceOne: 1, choiceTwo: 2, choiceThree: 3, choiceFour: 4, choiceFive: 5, choiceSix: 6, choiceSeven: 7, choiceEight: 8},
+  { user_id: 5, choiceOne: 1, choiceTwo: 2, choiceThree: 3, choiceFour: 4, choiceFive: 5, choiceSix: 6, choiceSeven: 7, choiceEight: 8},
+  { user_id: 6, choiceOne: 1, choiceTwo: 2, choiceThree: 3, choiceFour: 4, choiceFive: 5, choiceSix: 6, choiceSeven: 7, choiceEight: 8},
+  { user_id: 7, choiceOne: 1, choiceTwo: 2, choiceThree: 3, choiceFour: 4, choiceFive: 5, choiceSix: 6, choiceSeven: 7, choiceEight: 8},
+  { user_id: 8, choiceOne: 1, choiceTwo: 2, choiceThree: 3, choiceFour: 4, choiceFive: 5, choiceSix: 6, choiceSeven: 7, choiceEight: 8},
+  { user_id: 9, choiceOne: 1, choiceTwo: 2, choiceThree: 3, choiceFour: 4, choiceFive: 5, choiceSix: 6, choiceSeven: 7, choiceEight: 8},
+  { user_id: 10, choiceOne: 1, choiceTwo: 2, choiceThree: 3, choiceFour: 4, choiceFive: 5, choiceSix: 6, choiceSeven: 7, choiceEight: 8}
 ];
 
 var roundOneSeeds = [
-  { user_id: 1, choiceOne: 2, choiceTwo: 4, choiceThree: 6, choiceFour: 7 }
+  { user_id: 1, choiceOne: 1, choiceTwo: 3, choiceThree: 5, choiceFour: 7 },
+  { user_id: 2, choiceOne: 1, choiceTwo: 4, choiceThree: 5, choiceFour: 8 },
+  { user_id: 3, choiceOne: 1, choiceTwo: 3, choiceThree: 6, choiceFour: 7 },
+  { user_id: 4, choiceOne: 2, choiceTwo: 3, choiceThree: 5, choiceFour: 8 },
+  { user_id: 5, choiceOne: 1, choiceTwo: 4, choiceThree: 6, choiceFour: 7 },
+  { user_id: 6, choiceOne: 2, choiceTwo: 3, choiceThree: 5, choiceFour: 8 },
+  { user_id: 7, choiceOne: 2, choiceTwo: 4, choiceThree: 6, choiceFour: 7 },
+  { user_id: 8, choiceOne: 1, choiceTwo: 3, choiceThree: 5, choiceFour: 8 },
+  { user_id: 9, choiceOne: 2, choiceTwo: 3, choiceThree: 5, choiceFour: 7 },
+  { user_id: 10, choiceOne: 1, choiceTwo: 4, choiceThree: 6, choiceFour: 8 }
 ];
 
 var roundTwoSeeds = [
-  { user_id: 1, choiceOne: 4, choiceTwo: 7 }
+  { user_id: 1, choiceOne: 1, choiceTwo: 5 },
+  { user_id: 2, choiceOne: 4, choiceTwo: 8 },
+  { user_id: 3, choiceOne: 3, choiceTwo: 6 },
+  { user_id: 4, choiceOne: 2, choiceTwo: 8 },
+  { user_id: 5, choiceOne: 4, choiceTwo: 7 },
+  { user_id: 6, choiceOne: 1, choiceTwo: 6 },
+  { user_id: 7, choiceOne: 2, choiceTwo: 7 },
+  { user_id: 8, choiceOne: 3, choiceTwo: 5 },
+  { user_id: 9, choiceOne: 2, choiceTwo: 5 },
+  { user_id: 10, choiceOne: 4, choiceTwo: 8 }
 ];
 
 var roundThreeSeeds = [
-  { user_id: 1, choiceOne: 4 }
+  { user_id: 1, choiceOne: 1 },
+  { user_id: 2, choiceOne: 8 },
+  { user_id: 3, choiceOne: 3 },
+  { user_id: 4, choiceOne: 8 },
+  { user_id: 5, choiceOne: 4 },
+  { user_id: 6, choiceOne: 1 },
+  { user_id: 7, choiceOne: 7 },
+  { user_id: 8, choiceOne: 5 },
+  { user_id: 9, choiceOne: 2 },
+  { user_id: 10, choiceOne: 8}
 ];
 
 module.exports = {
