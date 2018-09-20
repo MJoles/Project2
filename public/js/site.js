@@ -29,8 +29,6 @@ $('.votingbutton').on('click', function () {
         userPicks.choiceFour = id;
     }
 
-
-
 });
 
 //on click handle for the submit button
