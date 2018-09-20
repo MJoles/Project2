@@ -11,6 +11,10 @@ $('.votingbutton').on('click', function () {
     console.log(this);
     var match = $(this).data("match");
     console.log(match);
+    console.log(roundOneUserPicks.choiceOne);
+    console.log(roundOneUserPicks.choiceTwo);
+    console.log(roundOneUserPicks.choiceThree);
+    console.log(roundOneUserPicks.choiceFour);
     var id = $(this).data("id");
 
     //figure out which match you're in
