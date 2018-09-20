@@ -17,20 +17,39 @@ $('.votingbutton').on('click', function () {
     //then get id that they clicked
     //update the userPicks vars 
     if (match === "1") {
-        userPicks.choiceOne=id;
+        userPicks.choiceOne = id;
     }
     else if (match === "2") {
-        userPicks.choiceTwo=id;
+        userPicks.choiceTwo = id;
     }
     else if (match === "3") {
-        userPicks.choiceThree=id;
+        userPicks.choiceThree = id;
     }
     else if (match === "4") {
-        userPicks.choiceFour=id;
+        userPicks.choiceFour = id;
     }
 
 
-    //   $.ajax({
+
+});
+
+//on click handle for the submit button
+$(".submitButton").on('click', function () {
+
+    // ensure strings arent empty
+    if (userPicks.choiceOne === "" || userPicks.choiceTwo === "" || userPicks.choiceThree === "" || userPicks.choiceFour === "") {
+        return false
+        //need to add error message
+    }
+    else {
+        //make ajax post request
+        //.then redirect them to next page 
+    }
+
+
+});
+
+//   $.ajax({
     // headers: {
     //       "Content-Type": "application/json"
     //     },
@@ -38,13 +57,3 @@ $('.votingbutton').on('click', function () {
     //     url: "/rd2",
     //     data: JSON.stringify(example)
     //   });
-});
-
-//on click handle for the submit button
-$(".submitButton").on('click', function () {
-
-// ensure strings arent empty
-
-//make ajax post request
-//.then redirect them to next page 
-});
