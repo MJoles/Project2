@@ -6,6 +6,17 @@ $(document).ready(function() {
       choiceFour: ""
   };
 
+  var roundTwoUserPicks = {
+    choiceFive: "",
+    choiceSix: "",
+    };
+
+var roundThreeUserPicks = {
+    choiceOne: "",
+    };
+
+  
+
   //Voting button onclick handler that grabs user choices
   $('.votingbutton').on('click', function () {
       console.log(this);
@@ -19,6 +30,7 @@ $(document).ready(function() {
       console.log(roundOneUserPicks.choiceFour);
 
       var id = $(this).data("id");
+      
 
       console.log("Movie id: " + id);
 
@@ -34,6 +46,17 @@ $(document).ready(function() {
       else if (match == "4") {
           roundOneUserPicks.choiceFour = id;
       }
+      else if (match == "5") {
+          console.log(this)
+        roundTwoUserPicks.choiceFive = id;
+      }
+      else if (match == "6") {
+        roundTwoUserPicks.choiceSix = id;
+    }
+    else if (match == "7") {
+        roundThreeUserPicks.choiceOne = id;
+    }
+      
   });
 
   //Submit Button onclick handler with post request to database
@@ -49,6 +72,7 @@ $(document).ready(function() {
           data: JSON.stringify(roundOneUserPicks)
       //.then redirect them to next page v
       }).then(function(res) {
+        
       console.log(res);
       });
     console.log("this is the end");

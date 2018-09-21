@@ -53,16 +53,15 @@ module.exports = function (app) {
           if (i < 2) {
             // The first two movies are match 5
             dbRoundOne[i].match = 5;
-          } else if (i < 4) {
+            } else if (i < 4) {
             // The next two movies are match 6
             dbRoundOne[i].match = 6;
-          } 
+            } 
         }
-        
+        res.render("round2", {
+          roundones: dbRoundOne
       }
       );
-      res.render("round2", {
-      
       });
     });
 
@@ -74,28 +73,35 @@ module.exports = function (app) {
       });
     });
 
-    //tad test Load Round 0
-    app.get("/rd2", function (req, res) {
-      db.RoundOne.findOne({}).then(function (dbMovies_r2) {
-        res.render("round2", {
-          movies: dbMovies_r2
+    // //tad test Load Round 0
+    // app.get("/rd2", function (req, res) {
+    //   db.RoundOne.findOne({}).then(function (dbMovies_r2) {
+    //     res.render("round2", {
+    //       movies: dbMovies_r2
+    //     });
+    //   });
+    // });
+
+
+    //get request from RoundTwo model into RoundThree
+    app.get("/rd3", function (req, res) {
+      db.RoundTwo.findOne({}).then(function (dbRoundThree) {
+        for (var i = 0; i < dbRoundThree.length; i++) {
+          if (i < 2) {
+            // The first two movies are match 5
+            dbRoundThree[i].match = 7;
+          }
+        res.render("round3", {
+          roundtwos: dbRoundThree
         });
-      });
+      }
+    });
     });
 
     // Post votes from round one into round two
     app.post("/rd3", function (req, res) {
       db.RoundTwo.create(req.body).then(function (dbRoundTwo) {
         res.json(dbRoundTwo);
-      });
-    });
-
-    //tad test Load Round 0
-    app.get("/rd3", function (req, res) {
-      db.RoundThree.findOne({}).then(function (dbMovies_r3) {
-        res.render("round3", {
-          movies: dbMovies_r3
-        });
       });
     });
 
