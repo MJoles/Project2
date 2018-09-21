@@ -1,4 +1,4 @@
-# Project 2 - Blitz Bracket
+# Project 2 - Brack-Attack
 
 [![Build Status](-----) --- Insert Link
 
@@ -26,13 +26,13 @@ Who does data creation?
   ### Front-end  
   - Bootstrap
   - Handlebars
+  - Sassy CSS
   - Custom CSS
 
   ### Back-end
   - Node.js
   - Express
   - Sequelize
-  - Passport
 
   ### Database
   - MySQL
