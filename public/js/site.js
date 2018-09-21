@@ -7,8 +7,8 @@ $(document).ready(function() {
   };
 
   var roundTwoUserPicks = {
-    choiceFive: "",
-    choiceSix: "",
+    choiceOne: "",
+    choiceTwo: "",
     };
 
 var roundThreeUserPicks = {
@@ -22,39 +22,42 @@ var roundThreeUserPicks = {
       console.log(this);
 
       var match = $(this).data("match");
+      
 
       console.log("Match: " + match);
       console.log(roundOneUserPicks.choiceOne);
       console.log(roundOneUserPicks.choiceTwo);
       console.log(roundOneUserPicks.choiceThree);
       console.log(roundOneUserPicks.choiceFour);
+      console.log("round2Picks: " + roundTwoUserPicks.choiceOne);
 
       var id = $(this).data("id");
-      
+      var movieTitle = $(this).data("movie")
 
       console.log("Movie id: " + id);
+      console.log("Movie Title: " + movieTitle);
 
       if (match == "1") {
-          roundOneUserPicks.choiceOne = id;
+          roundOneUserPicks.choiceOne = movieTitle;
       }
       else if (match == "2") {
-          roundOneUserPicks.choiceTwo = id;
+          roundOneUserPicks.choiceTwo = movieTitle;
       }
       else if (match == "3") {
-          roundOneUserPicks.choiceThree = id;
+          roundOneUserPicks.choiceThree = movieTitle;
       }
       else if (match == "4") {
-          roundOneUserPicks.choiceFour = id;
+          roundOneUserPicks.choiceFour = movieTitle;
       }
       else if (match == "5") {
           console.log(this)
-        roundTwoUserPicks.choiceFive = id;
+        roundTwoUserPicks.choiceOne = movieTitle;
       }
       else if (match == "6") {
-        roundTwoUserPicks.choiceSix = id;
+        roundTwoUserPicks.choiceTwo = movieTitle;
     }
     else if (match == "7") {
-        roundThreeUserPicks.choiceOne = id;
+        roundThreeUserPicks.choiceOne = movieTitle;
     }
       
   });
