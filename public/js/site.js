@@ -3,25 +3,25 @@ var roundOneUserPicks = {
     choiceOne: "",
     choiceTwo: "",
     choiceThree: "",
-    choiceFour: "",
-
+    choiceFour: ""
 }
 
-
+//Voting button onclick handler that grabs user choices
 $('.votingbutton').on('click', function () {
     console.log(this);
+
     var match = $(this).data("match");
-    console.log(match);
+
+    console.log("Match: " + match);
     console.log(roundOneUserPicks.choiceOne);
     console.log(roundOneUserPicks.choiceTwo);
     console.log(roundOneUserPicks.choiceThree);
     console.log(roundOneUserPicks.choiceFour);
-    console.log("voting button" + roundOneUserPicks);
+
     var id = $(this).data("id");
-    console.log(id);
-    //figure out which match you're in
-    //then get id that they clicked
-    //update the userPicks vars 
+    
+    console.log("Movie id: " + id);
+   
     if (match == "1") {
         roundOneUserPicks.choiceOne = id;
     }
@@ -37,7 +37,7 @@ $('.votingbutton').on('click', function () {
 
 });
 
-//on click handle for the submit button
+//Submit Button onclick handler with post request to database
 $(".submitButton").on('click', function () {
 
     // ensure strings arent empty
@@ -46,29 +46,19 @@ $(".submitButton").on('click', function () {
     //     //need to add error message later
     // }
     // else {
-        //make ajax post request
-//         $.post("/rd2", {myData: roundOneUserPicks.ch}, function (data, status, xhr){
-//             alert('status: ' + status + ", data: " + data)
-//         })
        console.log(roundOneUserPicks)
 //         //.then redirect them to next page 
-//         .then(RoundOne); return RoundOne
-        
-
-
-// });
-
-$.ajax({
-    headers: {
+// Ajax post request to post roundOneUserPicks to the RoundOne database
+    $.ajax({
+        headers: {
           "Content-Type": "application/json"
-        },
-       type: "POST",
-       url: "/rd2",
-       data: JSON.stringify(roundOneUserPicks)
-         
- }).then(function(res) {
-   console.log(res)
-});
-  console.log("this");
-});
+            },
+        type: "POST",
+        url: "/rd2",
+        data: JSON.stringify(roundOneUserPicks)
+    }).then(function(res) {
+        console.log(res)
+        });
+        console.log("this is the end");
+    });
 });
