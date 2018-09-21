@@ -11,9 +11,6 @@ module.exports = function (app) {
   //   });
   // });
 
-
-
-
   //tad test Load Round 0
   app.get("/rd1", function (req, res) {
     // <<<<<<< HEAD
@@ -56,16 +53,6 @@ module.exports = function (app) {
       });
     });
 
-    //Load Round 0
-    app.get("/round", function (req, res) {
-      console.log(req.headers['x-forwarded-for'], req.connection.remoteAddress, '');
-      console.log(ip);
-      db.userTable.findAll({}).then(function (round) {
-        res.render("round", {
-          movies: round
-        });
-      });
-    });
 
     // Post votes from round one into round two
     app.post("/rd2", function (req, res) {

@@ -36,17 +36,19 @@ $('.votingbutton').on('click', function () {
 });
 
 //on click handle for the submit button
-$(".submitButton").on('click', function () {
+$(".submitButton").on('click', function (userPicks) {
 
     // ensure strings arent empty
-    if (userPicks.choiceOne === "" || userPicks.choiceTwo === "" || userPicks.choiceThree === "" || userPicks.choiceFour === "") {
-        return false
-        //need to add error message later
-    }
-    else {
+    // if (roundOneUserPicks.choiceOne === "" || roundOneUserPicks.choiceTwo === "" || roundOneUserPicks.choiceThree === "" || roundOneUserPicks.choiceFour === "") {
+    //     return false
+    //     //need to add error message later
+    // }
+    // else {
         //make ajax post request
+        $.post("/rd2", userPicks)
+        console.log(userPicks)
         //.then redirect them to next page 
-    }
+        .then(RoundOne);   
 
 
 });
