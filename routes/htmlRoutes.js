@@ -48,8 +48,21 @@ module.exports = function (app) {
 
     //tad test --round 2 starts by loading Round 1 choices
     app.get("/rd2", function (req, res) {
+      db.RoundOne.findAll({}).then(function (dbRoundOne) {
+        for (var i = 0; i < dbRoundOne.length; i++) {
+          if (i < 2) {
+            // The first two movies are match 5
+            dbRoundOne[i].match = 5;
+          } else if (i < 4) {
+            // The next two movies are match 6
+            dbRoundOne[i].match = 6;
+          } 
+        }
+        
+      }
+      );
       res.render("round2", {
-
+      
       });
     });
 
