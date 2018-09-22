@@ -95,20 +95,26 @@ module.exports = function (app) {
       );
       });
     });
+    // Post votes from round one into round two
+    app.post("/rd3", function (req, res) {
+      db.RoundTwo.create(req.body).then(function (dbRoundTwo) {
+        res.json(dbRoundTwo);
+      });
+    });
 
-    app.get("/winner", function (req, res) {
-      db.RoundTwo.findAll({
+    app.get("/win", function (req, res) {
+      db.RoundThree.findAll({
         limit: 1,
         order: [ [ 'createdAt', 'DESC' ]]
       }).then(function (data) {
         
         var choicesRow = data[0]; // how it was in the database
         var choicesArray = [
-          {movieTitle: choicesRow.choiceOne}
+          {movieTitle: choicesRow}
           
         ];
         
-        choicesArray[0].match = 8;
+        choicesArray[0].match = 7;
        
        
         
@@ -119,9 +125,15 @@ module.exports = function (app) {
       });
     });
     // Post votes from round one into round two
-    app.post("/rd3", function (req, res) {
-      db.RoundTwo.create(req.body).then(function (dbRoundTwo) {
-        res.json(dbRoundTwo);
+    // app.post("/rd3", function (req, res) {
+    //   db.RoundTwo.create(req.body).then(function (dbRoundTwo) {
+    //     res.json(dbRoundTwo);
+    //   });
+    // });
+
+    app.post("/win", function (req, res) {
+      db.RoundThree.create(req.body).then(function (dbRoundThree) {
+        res.json(dbRoundThree);
       });
     });
 
