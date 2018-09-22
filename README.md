@@ -4,10 +4,10 @@
  - [Brack-Attack](---Heroku Link---)
 
 ## Author(s)
-  - [Tad Hwang] --- (Middleware /  / )
-  - [Mandy Joles] --- (Routing / _____ / _____)
-  - [Samira _____] --- (_____ / _____ / _____)
-  - [Joseph Perkins] --- (Connection / Database Creation / Base HTML / CSS / Documentation / Comments)
+  - [Tad Hwang] --- Handlebars, HTML,CSS, Comments, and some JS
+  - [Mandy Joles] ---Routing!
+  - [Samira _____API research, CORS debugging, documentation)
+  - [Joseph Perkins] --- Connection, Database, HTML, CSS<> Documentation / Comments)
 
 Who is Project Manager?
 Who does Front End?
@@ -17,7 +17,9 @@ Who does connections?
 Who does data creation?
 
 ## Description
-  ***Description goes here***
+This project is a voting app.  Users are presented with a tournament bracket of movies,
+which they must vote on.  Once each match is voted on, the movies that are voted can 
+move on to the next round.  The winning movie joins a leaderboard.  
 
 ## Technologies Used
 
