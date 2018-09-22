@@ -34,7 +34,7 @@ var roundThreeUserPicks = {
       var id = $(this).data("id");
       var movieTitle = $(this).data("movie")
 
-      console.log("Movie id: " + id);
+      console.log("Movie: " + movie);
       console.log("Movie Title: " + movieTitle);
 
       if (match == "1") {
@@ -51,10 +51,10 @@ var roundThreeUserPicks = {
       }
       else if (match == "5") {
           console.log(this)
-        roundTwoUserPicks.choiceOne = movieTitle;
+        roundOneUserPicks.choiceOne = movieTitle;
       }
       else if (match == "6") {
-        roundTwoUserPicks.choiceTwo = movieTitle;
+        roundOneUserPicks.choiceTwo = movieTitle;
     }
     else if (match == "7") {
         roundThreeUserPicks.choiceOne = movieTitle;
@@ -71,7 +71,7 @@ var roundThreeUserPicks = {
             "Content-Type": "application/json"
               },
           type: "POST",
-          url: "/rd2",
+          url: "../rd2",
           data: JSON.stringify(roundOneUserPicks)
       //.then redirect them to next page v
       }).then(function(res) {
@@ -80,4 +80,22 @@ var roundThreeUserPicks = {
       });
     console.log("this is the end");
     });
+
+    $(".submitButton2").on('click', function () {
+        console.log(roundTwoUserPicks);
+        // Ajax post request to post roundOneUserPicks to the RoundOne database
+        $.ajax({
+            headers: {
+              "Content-Type": "application/json"
+                },
+            type: "POST",
+            url: "../rd3",
+            data: JSON.stringify(roundTwoUserPicks)
+        //.then redirect them to next page v
+        }).then(function(res) {
+          
+        console.log(res);
+        });
+      console.log("this is the end");
+      });
 });
