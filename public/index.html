@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <meta charset="utf-8">
@@ -45,10 +44,10 @@
             <a class="nav-link js-scroll-trigger" href="#page-top">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Leaderboard</a>
+            <a class="nav-link js-scroll-trigger" href="#rules">Rules</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#rules">Rules</a>
+            <a class="nav-link js-scroll-trigger" href="/rd1">Start Playing!</a>
           </li>
         </ul>
       </div>
@@ -56,10 +55,14 @@
   </nav>
 
   <style>
-    .buttonCenter {
-      text-align: center;
-    }
-  </style>
+  .buttonCenter {
+    text-align: center;
+    margin: 0 auto;
+
+  .btn {
+    text-align: center;
+  }
+</style>
 
   <header class="masthead text-center text-grey d-flex">
     <div class="container my-auto">
@@ -73,17 +76,17 @@
         <div class="col-lg-8 mx-auto">
           <p class="text-grey mb-5">Vote on your favorite items and see how your choice stacks up!</p>
           <!-- This will take the user to the "Home" page -->
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#rules">Get Started!</a>
+          <a class="btn btn-primary btn-xl js-scroll-trigger buttonCenter" href="#rules">Get Started!</a>
         </div>
       </div>
     </div>
   </header>
 
-  <section id="rules">
+  <section class="bg-dark" id="rules">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading">Steps to the Game!</h2>
+          <h2 class="section-heading text-light">Steps to the Game!</h2>
           <hr class="my-4">
         </div>
       </div>
@@ -93,36 +96,36 @@
         <div class="col-lg-3 col-md-6 text-center">
           <div class="service-box mt-5 mx-auto">
             <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-            <h3 class="mb-3">Step #1</h3>
-            <p class="text-muted mb-0">1. Select the category you want to battle it out with</p>
+            <h3 class="mb-3 text-faded">1 - Quarterfinals</h3>
+            <p class="text-light mb-0 text-light">1. Choose four of your favorite superhero movie from eight initial items.</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="service-box mt-5 mx-auto">
             <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-            <h3 class="mb-3">Step #2</h3>
-            <p class="text-muted mb-0">2. Eight options will appear for you to choose from. You will pick four of them.</p>
+            <h3 class="mb-3 text-faded">2 - Semifinals</h3>
+            <p class="text-light mb-0 text-light">2. These four selections will move to the next round in which you can only pick two.</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="service-box mt-5 mx-auto">
             <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-            <h3 class="mb-3">Step #3</h3>
-            <p class="text-muted mb-0">3. The four options you chose will appear again. You will pick two of them.</p>
+            <h3 class="mb-3 text-faded">3 - Finals</h3>
+            <p class="text-light mb-0">3. These two options will move to the final round in which you pick the winner!</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="service-box mt-5 mx-auto">
             <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
-            <h3 class="mb-3">Step #4</h3>
-            <p class="text-muted mb-0">4. At the end, you will see the how your pick matches up against the competion</p>
+            <h3 class="mb-3 text-faded">4 - Winner!</h3>
+            <p class="text-light mb-0">4. You will then be able to click to go back to the landing page!</p>
           </div>
         </div>
       </div>
     </div>
-
+    <a class="btn btn-light btn-xl bg-primary js-scroll-trigger buttonCenter" href="/rd1">Start Playing!</a>
+    <!-- <button type="button" a class="btn btn-light btn-xl bg-primary js-scroll-trigger buttonCenter" href="/rd1">Start Playing!</a> -->
   </section>
-  <a class="btn btn-light btn-xl bg-primary js-scroll-trigger buttonCenter" href="/rd1">Start Playing!</a>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -137,5 +140,4 @@
   <script src="js/creative.min.js"></script>
 
 </body>
-
 </html>
