@@ -171,6 +171,10 @@ img::-moz-selection {
   }
 }
 
+.buttonCenter {
+  text-align: center;
+} 
+
 handlebarbackground {
   background-image: url("../img/header.jpg");
   background-attachment: fixed;
