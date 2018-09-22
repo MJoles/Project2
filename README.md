@@ -1,15 +1,13 @@
 # Project 2 - Brack-Attack
 
-[![Build Status](-----) --- Insert Link
-
 ## Live Preview
- - [Blitz Bracket](---Heroku Link---)
+ - [Brack-Attack](---Heroku Link---)
 
 ## Author(s)
-  - [Tad Hwang](---Link to Github Page---)(Middleware /  / )
-  - [Mandy Joles](---Link to Github Page---) (Routing / _____ / _____)
-  - [Samira _____](---Link to Github Page---) (_____ / _____ / _____)
-  - [Joseph Perkins](---Link to Github Page---) (Connection / Database Creation / Base HTML / CSS / Documentation / Comments)
+  - [Tad Hwang] --- (Middleware /  / )
+  - [Mandy Joles] --- (Routing / _____ / _____)
+  - [Samira _____] --- (_____ / _____ / _____)
+  - [Joseph Perkins] --- (Connection / Database Creation / Base HTML / CSS / Documentation / Comments)
 
 Who is Project Manager?
 Who does Front End?
@@ -36,11 +34,6 @@ Who does data creation?
 
   ### Database
   - MySQL
-
-  ### Testing
-  - Travis CI
-  - Chai
-  - Mocha
 
   ### Deployment
   - Heroku
