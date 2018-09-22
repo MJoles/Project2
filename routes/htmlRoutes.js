@@ -96,6 +96,28 @@ module.exports = function (app) {
       });
     });
 
+    app.get("/winner", function (req, res) {
+      db.RoundTwo.findAll({
+        limit: 1,
+        order: [ [ 'createdAt', 'DESC' ]]
+      }).then(function (data) {
+        
+        var choicesRow = data[0]; // how it was in the database
+        var choicesArray = [
+          {movieTitle: choicesRow.choiceOne}
+          
+        ];
+        
+        choicesArray[0].match = 8;
+       
+       
+        
+        res.render("winner", {
+          roundthrees: choicesArray
+      }
+      );
+      });
+    });
     // Post votes from round one into round two
     app.post("/rd3", function (req, res) {
       db.RoundTwo.create(req.body).then(function (dbRoundTwo) {
