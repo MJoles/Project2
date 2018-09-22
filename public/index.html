@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <meta charset="utf-8">
@@ -56,10 +55,14 @@
   </nav>
 
   <style>
-    .buttonCenter {
-      text-align: center;
-    }
-  </style>
+  .buttonCenter {
+    text-align: center;
+    margin: 0 auto;
+
+  .btn {
+    text-align: center;
+  }
+</style>
 
   <header class="masthead text-center text-grey d-flex">
     <div class="container my-auto">
@@ -73,7 +76,7 @@
         <div class="col-lg-8 mx-auto">
           <p class="text-grey mb-5">Vote on your favorite items and see how your choice stacks up!</p>
           <!-- This will take the user to the "Home" page -->
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#rules">Get Started!</a>
+          <a class="btn btn-primary btn-xl js-scroll-trigger buttonCenter" href="#rules">Get Started!</a>
         </div>
       </div>
     </div>
@@ -121,6 +124,7 @@
       </div>
     </div>
     <a class="btn btn-light btn-xl bg-primary js-scroll-trigger buttonCenter" href="/rd1">Start Playing!</a>
+    <!-- <button type="button" a class="btn btn-light btn-xl bg-primary js-scroll-trigger buttonCenter" href="/rd1">Start Playing!</a> -->
   </section>
 
   <!-- Bootstrap core JavaScript -->
@@ -136,5 +140,4 @@
   <script src="js/creative.min.js"></script>
 
 </body>
-
 </html>
