@@ -34,7 +34,7 @@ var roundThreeUserPicks = {
       var id = $(this).data("id");
       var movieTitle = $(this).data("movie")
 
-      console.log("Movie: " + movie);
+      console.log("Movie id: " + id);
       console.log("Movie Title: " + movieTitle);
 
       if (match == "1") {
@@ -51,10 +51,10 @@ var roundThreeUserPicks = {
       }
       else if (match == "5") {
           console.log(this)
-        roundOneUserPicks.choiceOne = movieTitle;
+        roundTwoUserPicks.choiceOne = movieTitle;
       }
       else if (match == "6") {
-        roundOneUserPicks.choiceTwo = movieTitle;
+        roundTwoUserPicks.choiceTwo = movieTitle;
     }
     else if (match == "7") {
         roundThreeUserPicks.choiceOne = movieTitle;
