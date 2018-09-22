@@ -4,10 +4,10 @@
  - [Brack-Attack](---Heroku Link---)
 
 ## Author(s)
-  - [Tad Hwang] --- Handlebars, HTML,CSS, Comments, and some JS
+  - [Tad Hwang] --- Handlebars, HTML,CSS, Comments, some JS
   - [Mandy Joles] ---Routing!
-  - [Samira _____API research, CORS debugging, documentation)
-  - [Joseph Perkins] --- Connection, Database, HTML, CSS<> Documentation / Comments)
+  - [Samira ] ----API research, CORS debugging, documentation)
+  - [Joseph Perkins] --- Connection, Database, HTML, CSS, Documentation, Comments)
 
 Who is Project Manager?
 Who does Front End?
