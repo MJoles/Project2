@@ -65,12 +65,12 @@ module.exports = function (app) {
     });
 
 
-    // Post votes from round one into round two
-    // app.post("/rd2", function (req, res) {
-    //   db.RoundOne.create(req.body).then(function (dbRoundOne) {
-    //     res.json(dbRoundOne);
-    //   });
-    // });
+    //Post votes from round one into round two
+    app.post("/rd2", function (req, res) {
+      db.RoundOne.create(req.body).then(function (dbRoundOne) {
+        res.json(dbRoundOne);
+      });
+    });
 
     //get request from RoundTwo model into RoundThree
     app.get("/rd3", function (req, res) {
