@@ -1,0 +1,23 @@
+<h2></h2>
+
+    Leaderboard</h2>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Place</th>
+                <th>Movie</th>
+                <th>Vote Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each movies}}
+            <tr>
+                <td>#{{@index}}</td>
+                <td>{{movieTitle}}</td>
+                <td>{{votes}} Votes</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

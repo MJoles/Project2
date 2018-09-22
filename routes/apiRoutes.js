@@ -1,10 +1,16 @@
+//---------------------------------------------------------------------------------------------------------
+// For sake of time, all of the routes are going to be in the same file - htmlRoutes, instead of in both htmlRoutes and apiRoutes
+//---------------------------------------------------------------------------------------------------------
+
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  // Get roundOne row
+  app.get("/api/roundOneGet", function(req, res) {
+    db.RoundOne.findOne({}).then(function(dbRoundOne) {
+      res.render("round2", {
+        movies: dbRoundOne
+      });
     });
   });
 

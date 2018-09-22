@@ -1,0 +1,60 @@
+<style>
+  h1 {
+    text-align: center;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+</style>
+
+<h1> Round 1 (Four matches)</h1>
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-5">Match 1 </h1>
+  <p class="lead">--------------------</p>
+  <div class="container">
+    <div class="row">
+
+{{!-- here is where we insert the partials for the individual movies for match 1 --}}
+      {{> movies/movie-block movies.[0] }} vs {{> movies/movie-block movies.[1] }}
+    </div>
+  </div>
+</div>
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-5">Match 2</h1>
+  <p class="lead">--------------------</p>
+  <div class="container">
+    <div class="row">
+      {{!-- here is where we insert the partials for the individual movies for match 2 --}}
+      {{> movies/movie-block movies.[2] }} vs {{> movies/movie-block movies.[3] }}
+    </div>
+  </div>
+</div>
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-5">Match 3</h1>
+  <p class="lead">--------------------</p>
+  <div class="container">
+    <div class="row">
+      {{!-- here is where we insert the partials for the individual movies for match 3 --}}
+      {{> movies/movie-block movies.[4] }} vs {{> movies/movie-block movies.[5] }}
+    </div>
+  </div>
+</div>
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-5">Match 4</h1>
+  <p class="lead">--------------------</p>
+  <div class="container">
+    <div class="row">
+      {{!-- here is where we insert the partials for the individual movies for match 4 --}}
+      {{> movies/movie-block movies.[6] }} vs {{> movies/movie-block movies.[7] }}
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <button class="btn bg-primary btn-primary submitButton"> Submit </button>
