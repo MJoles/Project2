@@ -13,16 +13,7 @@ module.exports = function (app) {
 
   //tad test Load Round 0
   app.get("/rd1", function (req, res) {
-    // <<<<<<< HEAD
-    //     db.Movie.findAll({}).then(function (dbMovies) {
-    //       console.log(dbMovies);
-    // =======
-    // <<<<<<< HEAD
-    //     db.Movie.findAll({}).then(function (dbMovies_r1) {
-    // >>>>>>> 2bdac061de3152296d96b4f8942394f717e684cf
-    //       res.render("round1", {
-    //         movies: dbMovies_r1
-    // =======
+
     db.Movie.findAll({}).then(function (dbMovies) {
       for (var i = 0; i < dbMovies.length; i++) {
         if (i < 2) {
@@ -48,19 +39,26 @@ module.exports = function (app) {
 
     //tad test --round 2 starts by loading Round 1 choices
     app.get("/rd2", function (req, res) {
-      db.RoundOne.findAll({where: {id: 11}}).then(function (dbRoundOne) {
-        for (var i = 0; i < dbRoundOne.length; i++) {
-          if (i < 2) {
-            // The first two movies are match 5
-            dbRoundOne[i].match = 5;
-            } else if (i < 4) {
-            // The next two movies are match 6
-            dbRoundOne[i].match = 6;
-            } 
-            console.log(req)
-        }
+      db.RoundOne.findAll({
+        limit: 1,
+        order: [ [ 'createdAt', 'DESC' ]]
+      }).then(function (data) {
+        
+        var choicesRow = data[0]; // how it was in the database
+        var choicesArray = [
+          {movieTitle: choicesRow.choiceOne},
+          {movieTitle: choicesRow.choiceTwo},
+          {movieTitle: choicesRow.choiceThree},
+          {movieTitle: choicesRow.choiceFour}
+        ];
+        
+        choicesArray[0].match = 5;
+        choicesArray[1].match = 5;
+        choicesArray[2].match = 6;
+        choicesArray[3].match = 6;
+        
         res.render("round2", {
-          roundone: dbRoundOne
+          roundones: choicesArray
       }
       );
       });
@@ -74,29 +72,28 @@ module.exports = function (app) {
       });
     });
 
-    // //tad test Load Round 0
-    // app.get("/rd2", function (req, res) {
-    //   db.RoundOne.findOne({}).then(function (dbMovies_r2) {
-    //     res.render("round2", {
-    //       movies: dbMovies_r2
-    //     });
-    //   });
-    // });
-
-
     //get request from RoundTwo model into RoundThree
     app.get("/rd3", function (req, res) {
-      db.RoundTwo.findOne({}).then(function (dbRoundThree) {
-        for (var i = 0; i < dbRoundThree.length; i++) {
-          if (i < 2) {
-            // The first two movies are match 5
-            dbRoundThree[i].match = 7;
-          }
+      db.RoundTwo.findAll({
+        limit: 1,
+        order: [ [ 'createdAt', 'DESC' ]]
+      }).then(function (data) {
+        
+        var choicesRow = data[0]; // how it was in the database
+        var choicesArray = [
+          {movieTitle: choicesRow.choiceOne},
+          {movieTitle: choicesRow.choiceTwo}
+        ];
+        
+        choicesArray[0].match = 7;
+        choicesArray[1].match = 7;
+       
+        
         res.render("round3", {
-          roundtwos: dbRoundThree
-        });
+          roundtwos: choicesArray
       }
-    });
+      );
+      });
     });
 
     // Post votes from round one into round two
