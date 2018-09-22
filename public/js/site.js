@@ -75,7 +75,7 @@ var roundThreeUserPicks = {
           data: JSON.stringify(roundOneUserPicks)
       //.then redirect them to next page v
       }).then(function(res) {
-        
+        window.location.replace("/rd2")
       console.log(res);
       });
     console.log("this is the end");
@@ -93,7 +93,7 @@ var roundThreeUserPicks = {
             data: JSON.stringify(roundTwoUserPicks)
         //.then redirect them to next page v
         }).then(function(res) {
-          
+            window.location.replace("/rd3")
         console.log(res);
         });
       console.log("this is the end");
