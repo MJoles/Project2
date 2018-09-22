@@ -29,7 +29,7 @@ var roundThreeUserPicks = {
       console.log(roundOneUserPicks.choiceTwo);
       console.log(roundOneUserPicks.choiceThree);
       console.log(roundOneUserPicks.choiceFour);
-      console.log("round2Picks: " + roundTwoUserPicks.choiceOne);
+      
 
       var id = $(this).data("id");
       var movieTitle = $(this).data("movie")

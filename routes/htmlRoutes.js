@@ -48,18 +48,19 @@ module.exports = function (app) {
 
     //tad test --round 2 starts by loading Round 1 choices
     app.get("/rd2", function (req, res) {
-      db.RoundOne.findAll({}).then(function (dbRoundOne) {
+      db.RoundOne.findAll({where: {id: 11}}).then(function (dbRoundOne) {
         for (var i = 0; i < dbRoundOne.length; i++) {
-          if (i < 4) {
+          if (i < 2) {
             // The first two movies are match 5
             dbRoundOne[i].match = 5;
-            } else if (i < 8) {
+            } else if (i < 4) {
             // The next two movies are match 6
             dbRoundOne[i].match = 6;
             } 
+            console.log(req)
         }
         res.render("round2", {
-          roundones: dbRoundOne
+          roundone: dbRoundOne
       }
       );
       });
