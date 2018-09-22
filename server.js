@@ -6,11 +6,15 @@ var exphbs = require("express-handlebars");
 var env = require('dotenv').load();
 var db = require("./models");
 var seeds = require("./db/seeds");
+var cors = require('cors');
 
 var app = express();
 // var PORT = process.env.PORT || 3000;
 var PORT = process.env.PORT || 4000;
 app.enable('trust proxy');
+
+//this is to deal with that cors image issue
+app.use(cors());
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
