@@ -70,6 +70,11 @@ db.sequelize.sync({ force: true }).then(function() {
         PORT,
         PORT
       );
+
+      // Making the output brighter, and adding different color to every word. Cause...priorities
+      console.log("\x1b[1m","\x1b[34m","\n-------------------------------------------------\n" + "\x1b[36m","This" +"\x1b[35m","application" + "\x1b[34m","is" + "\x1b[33m","listening" + "\x1b[32m","on" + "\x1b[31m","PORT:" + "\x1b[36m", PORT + "\x1b[34m","\n-------------------------------------------------\n");
+      // Resetting console formatting to default
+      console.log("\x1b[0m");
     });
   });
 });
