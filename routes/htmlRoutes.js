@@ -1,11 +1,8 @@
 // Requiring our models folder
 var db = require("../models");
-
 module.exports = function (app) {
-
   //tad test Load Round 0
   app.get("/rd1", function (req, res) {
-
     db.Movie.findAll({}).then(function (dbMovies) {
       for (var i = 0; i < dbMovies.length; i++) {
         if (i < 2) {
@@ -96,11 +93,11 @@ module.exports = function (app) {
         choicesArray[0].match = 7;
         res.render("winner", {
           roundthrees: choicesArray
-        }
-      );
+        });
       });
     });
-    //Post request to win page 
+
+    //Post request to win page
     //Currently can only access typing in /win instead of using the onclick handler
     app.post("/win", function (req, res) {
       db.RoundThree.create(req.body).then(function (dbRoundThree) {
