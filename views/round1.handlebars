@@ -1,8 +1,8 @@
+{{!-- centering the round 1 header --}}
 <style>
   h1 {
     text-align: center;
   }
-
   .container {
     width: 100%;
   }
@@ -16,8 +16,7 @@
   <p class="lead">--------------------</p>
   <div class="container">
     <div class="row">
-
-{{!-- here is where we insert the partials for the individual movies for match 1 --}}
+      {{!-- here is where we insert the partials for the individual movies for match 1 --}}
       {{> movies/movie-block movies.[0] }} vs {{> movies/movie-block movies.[1] }}
     </div>
   </div>
