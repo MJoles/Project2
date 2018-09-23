@@ -1,3 +1,10 @@
+// *****************************************************************************
+// Server.js - This file is the initial starting point for the Node/Express server.
+//
+// ******************************************************************************
+// *** Dependencies
+// =============================================================
+
 require("dotenv").config();
 var express = require("express");
 var session = require('express-session');
@@ -8,6 +15,8 @@ var db = require("./models");
 var seeds = require("./db/seeds");
 var cors = require("cors");
 
+
+// Setting up express
 var app = express();
 // var PORT = process.env.PORT || 3000;
 var PORT = process.env.PORT || 4000;
@@ -52,8 +61,8 @@ models.sequelize.sync().then(function () {
   console.log(err, "Something went wrong with the Database Update!");
 });
 
-// Starting the server, syncing our models ------------------------------------/
-// Syncing our sequelize models and then starting our Express app
+// =============================================================
+// Starting the server, syncing our sequelize models and then starting our Express app/
 // =============================================================
 db.sequelize.sync({ force: true }).then(function () {
   Promise.all([

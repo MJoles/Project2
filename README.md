@@ -9,16 +9,9 @@
   - [Samira ] ----API research, CORS debugging, documentation
   - [Joseph Perkins] --- Connection, Database, HTML, CSS, Documentation, Comments
 
-Who is Project Manager?
-Who does Front End?
-Who does Back End?
-Who does Routing?
-Who does connections?
-Who does data creation?
-
 ## Description
 This project is a voting app.  Users are presented with a tournament bracket of movies,
-which they must vote on.  Once each match is voted on, the movies that are voted can 
+which they must vote on.  Once each match is voted on, the movies that are voted can
 move on to the next round.  The winning movie joins a leaderboard.  
 
 ## Technologies Used
@@ -28,6 +21,10 @@ move on to the next round.  The winning movie joins a leaderboard.
   - Handlebars
   - Sassy CSS
   - Custom CSS
+
+  ### Middleware
+  - Routes
+  - server.js
 
   ### Back-end
   - Node.js
