@@ -87,11 +87,29 @@ $(document).ready(function() {
             type: "POST",
             url: "../rd3",
             data: JSON.stringify(roundTwoUserPicks)
-        //.then redirect them to next page v
+        //.then redirect them to ne
         }).then(function(res) {
             window.location.replace("/rd3");
         console.log(res);
         });
       console.log("this is the end");
-      });
+    });
+
+    $(".submitButton3").on('click', function () {
+        console.log(roundThreeUserPicks);
+        // Ajax post request to post roundOneUserPicks to the RoundOne database
+        $.ajax({
+            headers: {
+              "Content-Type": "application/json"
+                },
+            type: "POST",
+            url: "../win",
+            data: JSON.stringify(roundThreeUserPicks)
+        //.then redirect them to next page v
+        }).then(function(res) {
+            window.location.replace("/win")
+        console.log(res);
+        });
+      console.log("this is the end");
+    });
 });
