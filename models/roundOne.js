@@ -1,3 +1,4 @@
+// RoundOne table structure
 module.exports = function(sequelize, DataTypes) {
   var RoundOne = sequelize.define("RoundOne", {
     choiceOne: DataTypes.STRING,

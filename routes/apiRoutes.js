@@ -2,6 +2,8 @@
 // For sake of time, all of the routes are going to be in the same file - htmlRoutes, instead of in both htmlRoutes and apiRoutes
 //---------------------------------------------------------------------------------------------------------
 
+// Most of our routing was condensed into the htmlRoutes file. I don't believe any of this was used.
+
 var db = require("../models");
 
 module.exports = function(app) {

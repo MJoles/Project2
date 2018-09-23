@@ -1,3 +1,4 @@
+// RoundZero table structure
 module.exports = function (sequelize, DataTypes) {
   var RoundZero = sequelize.define("RoundZero", {
     choiceOne: DataTypes.STRING,

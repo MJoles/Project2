@@ -1,3 +1,4 @@
+// Do all of the following once the page loads
 $(document).ready(function() {
   var roundOneUserPicks = {
       choiceOne: "",
@@ -11,28 +12,23 @@ $(document).ready(function() {
     choiceTwo: "",
     };
 
-var roundThreeUserPicks = {
-    choiceOne: "",
-    };
-
-  
+  var roundThreeUserPicks = {
+      choiceOne: "",
+      };
 
   //Voting button onclick handler that grabs user choices
   $('.votingbutton').on('click', function () {
       console.log(this);
-
       var match = $(this).data("match");
-      
-
       console.log("Match: " + match);
+      
       console.log(roundOneUserPicks.choiceOne);
       console.log(roundOneUserPicks.choiceTwo);
       console.log(roundOneUserPicks.choiceThree);
       console.log(roundOneUserPicks.choiceFour);
-      
 
       var id = $(this).data("id");
-      var movieTitle = $(this).data("movie")
+      var movieTitle = $(this).data("movie");
 
       console.log("Movie id: " + id);
       console.log("Movie Title: " + movieTitle);
@@ -50,7 +46,7 @@ var roundThreeUserPicks = {
           roundOneUserPicks.choiceFour = movieTitle;
       }
       else if (match == "5") {
-          console.log(this)
+          console.log(this);
         roundTwoUserPicks.choiceOne = movieTitle;
       }
       else if (match == "6") {
@@ -59,7 +55,7 @@ var roundThreeUserPicks = {
     else if (match == "7") {
         roundThreeUserPicks.choiceOne = movieTitle;
     }
-      
+
   });
 
   //Submit Button onclick handler with post request to database
@@ -75,7 +71,7 @@ var roundThreeUserPicks = {
           data: JSON.stringify(roundOneUserPicks)
       //.then redirect them to next page v
       }).then(function(res) {
-        window.location.replace("/rd2")
+        window.location.replace("/rd2");
       console.log(res);
       });
     console.log("this is the end");
@@ -93,7 +89,7 @@ var roundThreeUserPicks = {
             data: JSON.stringify(roundTwoUserPicks)
         //.then redirect them to next page v
         }).then(function(res) {
-            window.location.replace("/rd3")
+            window.location.replace("/rd3");
         console.log(res);
         });
       console.log("this is the end");
