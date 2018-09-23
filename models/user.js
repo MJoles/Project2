@@ -1,3 +1,4 @@
+// User table created for use with passport, which was ultimately dropped.
 module.exports = function(sequelize, Sequelize) {
     var User = sequelize.define('User', {
         id: {

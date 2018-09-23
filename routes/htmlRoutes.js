@@ -1,17 +1,9 @@
+// Requiring our models folder
 var db = require("../models");
 
 module.exports = function (app) {
-  // Load index page
-  // app.get("/", function (req, res) {
-  //   db.Movie.findAll({}).then(function (moviesdb) {
-  //     res.render("index", {
-  //       msg: "Welcome!",
-  //       movies: votingdb
-  //     });
-  //   });
-  // });
 
-  //tad test Load Round 0
+  //Get request for rd1 page to the Movie table to findAll Movies and put them in their matches
   app.get("/rd1", function (req, res) {
 
     db.Movie.findAll({}).then(function (dbMovies) {
@@ -32,99 +24,89 @@ module.exports = function (app) {
       }
       res.render("round1", {
         movies: dbMovies
-      })
-    }
-    );
+      });
+    });
 
-
-    //tad test --round 2 starts by loading Round 1 choices
+    //Get request for rd2 page to the RoundOne table
     app.get("/rd2", function (req, res) {
       db.RoundOne.findAll({
         limit: 1,
         order: [ [ 'createdAt', 'DESC' ]]
       }).then(function (data) {
-        
-        var choicesRow = data[0]; // how it was in the database
+        var choicesRow = data[0]; // putting data as an array
         var choicesArray = [
           {movieTitle: choicesRow.choiceOne},
           {movieTitle: choicesRow.choiceTwo},
           {movieTitle: choicesRow.choiceThree},
           {movieTitle: choicesRow.choiceFour}
         ];
-        
         choicesArray[0].match = 5;
         choicesArray[1].match = 5;
         choicesArray[2].match = 6;
         choicesArray[3].match = 6;
-        
         res.render("round2", {
           roundones: choicesArray
-      }
-      );
+        });
       });
     });
 
-
-    //Post votes from round one into round two
+    //Post votes from RoundOne table into RoundTwo table
     app.post("/rd2", function (req, res) {
       db.RoundOne.create(req.body).then(function (dbRoundOne) {
         res.json(dbRoundOne);
       });
     });
 
-    //get request from RoundTwo model into RoundThree
+    // Get request from RoundTwo model into RoundThree
     app.get("/rd3", function (req, res) {
       db.RoundTwo.findAll({
         limit: 1,
         order: [ [ 'createdAt', 'DESC' ]]
       }).then(function (data) {
-        
-        var choicesRow = data[0]; // how it was in the database
+
+        var choicesRow = data[0]; // putting data as an array
         var choicesArray = [
           {movieTitle: choicesRow.choiceOne},
           {movieTitle: choicesRow.choiceTwo}
         ];
-        
-        choicesArray[0].match = 7;
-        choicesArray[1].match = 7;
-       
-        
-        res.render("round3", {
+          choicesArray[0].match = 7;
+          choicesArray[1].match = 7;
+          res.render("round3", {
           roundtwos: choicesArray
-      }
-      );
+        });
       });
     });
-
-    app.get("/winner", function (req, res) {
-      db.RoundTwo.findAll({
-        limit: 1,
-        order: [ [ 'createdAt', 'DESC' ]]
-      }).then(function (data) {
-        
-        var choicesRow = data[0]; // how it was in the database
-        var choicesArray = [
-          {movieTitle: choicesRow.choiceOne}
-          
-        ];
-        
-        choicesArray[0].match = 8;
-       
-       
-        
-        res.render("winner", {
-          roundthrees: choicesArray
-      }
-      );
-      });
-    });
-    // Post votes from round one into round two
+    // Post votes from round two into round three
     app.post("/rd3", function (req, res) {
       db.RoundTwo.create(req.body).then(function (dbRoundTwo) {
         res.json(dbRoundTwo);
       });
     });
 
+    //Get Request to winner page using findAll from roundtrees page to find winner
+    app.get("/win", function (req, res) {
+      db.RoundThree.findAll({
+        limit: 1,
+        order: [ [ 'createdAt', 'DESC' ]]
+      }).then(function (data) {
+        var choicesRow = data[0]; // how it was in the database
+        var choicesArray = [
+          {movieTitle: choicesRow}
+        ];
+        choicesArray[0].match = 7;
+        res.render("winner", {
+          roundthrees: choicesArray
+        }
+      );
+      });
+    });
+    //Post request to win page 
+    //Currently can only access typing in /win instead of using the onclick handler
+    app.post("/win", function (req, res) {
+      db.RoundThree.create(req.body).then(function (dbRoundThree) {
+        res.json(dbRoundThree);
+      });
+    });
 
     // Render 404 page for any unmatched routes
     app.get("*", function (req, res) {

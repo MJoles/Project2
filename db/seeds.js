@@ -1,3 +1,4 @@
+// This is some dummy user names - they are not real
 var userSeeds = [
   { name: "Vincent Balog" },
   { name: "Johnsie Keene" },
@@ -11,6 +12,7 @@ var userSeeds = [
   { name: "Vincenzo Leeman" },
 ];
 
+// This is the movie title and movie poster seeds data
 var seeds = [
   { movieTitle: "The Dark Knight", posterURL: "https://goo.gl/images/5t15Vd" },
   { movieTitle: "Captain America: The Winter Soldier", posterURL: "https://goo.gl/images/vWT7HS" },
@@ -21,8 +23,8 @@ var seeds = [
   { movieTitle: "Guardians of the Galaxy", posterURL: "https://goo.gl/images/Xmzqie" },
   { movieTitle: "Logan", posterURL: "https://goo.gl/images/adxta5" }
 
-
-
+// We had to scrap the category idea, so we commented out these categories and movies
+  //
   // { text: "Horror Movie", movieTitle: "Halloween (1978)", isSelected: false},
   // { text: "Horror Movie", movieTitle: "It Follows", isSelected: false},
   // { text: "Horror Movie", movieTitle: "The Shining", isSelected: false},
@@ -53,6 +55,8 @@ var roundZeroSeeds = [
   { user_id: 9, choiceOne: 1, choiceTwo: 2, choiceThree: 3, choiceFour: 4, choiceFive: 5, choiceSix: 6, choiceSeven: 7, choiceEight: 8 },
   { user_id: 10, choiceOne: 1, choiceTwo: 2, choiceThree: 3, choiceFour: 4, choiceFive: 5, choiceSix: 6, choiceSeven: 7, choiceEight: 8 }
 ];
+
+// The following three round seeds all had the data commented out so that we could better query the user inputs
 
 var roundOneSeeds = [
 //   { user_id: 1, choiceOne: 1, choiceTwo: 3, choiceThree: 5, choiceFour: 7 },
@@ -93,6 +97,7 @@ var roundThreeSeeds = [
   // { user_id: 10, choiceOne: 8 }
 ];
 
+// exporting the above data and putting it into the mysql tables
 module.exports = {
   seeds: seeds,
   userSeeds: userSeeds,
